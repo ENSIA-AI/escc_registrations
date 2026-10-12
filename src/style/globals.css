@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+html {
+  font-size: 16px;
+}
+
+@media (max-width: 1440px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 1080px) {
+  html {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 9px;
+  }
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --font-lexend: 'Lexend Deca', sans-serif;
+  --font-permanent: 'Lexend Deca', sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #ffffff;
+    --foreground: #0a0a0a;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
+  scroll-snap-type: y mandatory;
+  overflow-x: hidden;
+  display: relative;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-lexend);
+  overflow-x: hidden;
+  display: relative;
+}
+
+main {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  display: relative;
+}
+
+section {
+  scroll-snap-align: start;
+  display: flex;
+  display: relative;
+}
+
+/* @media (max-width: 768px) {
+  section {
+    height: auto;
+  }
+} */
+h2 {
+  font-size: 6rem;
+  font-family: var(--font-lexend);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: var(--brand2-deep-navy);
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  h2 {
+    font-size: 5rem;
+  }
+}
+
+@keyframes float-slow {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.float-animation {
+  animation: float-slow 6s ease-in-out infinite;
+  will-change: transform;
+}
+
+Image{
+  user-select: none;
+}
+
+/* Logo-derived palette for the new visual direction. */
+:root {
+  --brand2-electric-cyan: #00C9FF;
+  --brand2-fresh-mint: #92FE9D;
+  --brand2-deep-navy: #071A2B;
+  --brand2-midnight-blue: #0D2940;
+  --brand2-blue-slate: #183B52;
+  --brand2-pale-ice: #F4FDFF;
+  --brand2-ice-blue: #E8F9FF;
+  --brand2-soft-mint: #EDFFF0;
+  --brand2-primary-text: #10212E;
+  --brand2-secondary-text: #5B6B76;
+  --brand2-border: #D8E5EA;
+  --brand2-white: #FFFFFF;
+  --brand2-gradient: linear-gradient(110deg, var(--brand2-electric-cyan), var(--brand2-fresh-mint));
+}
